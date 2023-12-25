@@ -27,7 +27,6 @@ router.get('/google',async (req, res, next)=>{
 			},
       });
       const data = await response.json();
-      // console.log("data" , data);
       const {id_token, access_token} = data;
 
 

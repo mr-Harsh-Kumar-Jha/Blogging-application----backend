@@ -2,6 +2,11 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const commentSchema = new Schema({
+   postID:{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "blog",
+      required: true,
+   },
    userID: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "user",
@@ -9,6 +14,7 @@ const commentSchema = new Schema({
     },
     message: {
       type: String,
+      required: true,
     },
     date: {
       type: Date,

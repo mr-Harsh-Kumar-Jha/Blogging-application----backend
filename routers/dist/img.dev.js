@@ -97,10 +97,8 @@ router.get("/:id", function _callee2(req, res, next) {
           // //  res.send(`<img src="${base64Data}"/>`);
           //  res.send(Buffer.from(base64Data, 'base64'));
 
-          console.log("hello fucker");
           res.setHeader("Content-Type", "image/jpeg", // Set the appropriate content type for your images
           "Content-Length", imageBuffer.length);
-          console.log("hello fucker2");
           res.send(base64Data);
           _context2.next = 19;
           break;
